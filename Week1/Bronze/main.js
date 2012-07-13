@@ -24,6 +24,13 @@ window.addEventListener("DOMContentLoaded", function(){
 				$('displayLink').style.display = "none";
 				$('addBuff').style.display = "inline";
 				break;
+			case "off":
+				$('buffForm').style.display = "block";
+				$('clear').style.display = "inline";
+				$('displayLink').style.display = "none";
+				$('addBuff').style.display = "none";
+				$('items').style.display = "none";
+				break;
 			default:
 				$('buffForm').style.display = "block";
 				$('clear').style.display = "inline";
@@ -56,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 		//Save data into Local Storage; Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
-		alert("Buff Added!");
+		alert("Buff Saved!");
 	};
 	
 	//Validate Function
@@ -77,13 +84,17 @@ window.addEventListener("DOMContentLoaded", function(){
 			var nameError = "Please enter a name for the buff.";
 			getName.style.border = "1px solid red";
 			messageAry.push(nameError);
+		}else{
+			getName.style.border = "1px solid green";	
 		};
 		
 		if(getDescription.value === ""){
 			var descriptionError = "Please enter a description.";
 			getDescription.style.border = "1px solid red";
 			messageAry.push(descriptionError);
-		}
+		}else {
+			getDescription.style.border = "1px solid green";
+		};
 		
 /*
 		//Email Validation
@@ -166,12 +177,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
 		
-		toggleControls();
+		toggleControls("off");
 		
 		//populate the form fields with the current localStorage values.
 		$('buffName').value = item.name[1];
 		$('buffType').value = item.type[1];
-		$('buffLevel').value = item.requirement[1];
+		$('buffRounds').value = item.rounds[1];
 		var radios = document.forms[0].prereq;
 		for(var i=0; i<radios.length; i++){ //This is the check for the Radio Buttons
 			if(radios[i].value == "yes" && item.prereq[1] == "yes"){
@@ -182,14 +193,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 		$('description').value = item.description[1];
 		$('dateAdded').value = item.date[1];
-
 		//repeat format for items to fill
 		
 		
 		//remove the initial listener from the event
 		save.removeEventListener("click", storeData);
 		//Change Submit button Value to Edit Button
-		$('submit').value = "Edit Buff";
+		$('submit').value = "Save Edit";
 		var editSubmit = $('submit');
 		//Save the key value established in this function as a property of the editSubmit event so we can se that value when we save the data we edited.
 		editSubmit.addEventListener("click", validate);
@@ -253,4 +263,5 @@ window.addEventListener("DOMContentLoaded", function(){
 	save.addEventListener("click", validate);
 	var addBuffLink =$('addBuff');
 	addBuffLink.addEventListener("click",toggleControls);
+	
 });
