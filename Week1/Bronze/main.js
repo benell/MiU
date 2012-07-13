@@ -161,6 +161,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
+	//Get style image
+	function getImage(makeSubList, c){
+		var imageLi = document.createElement('li');
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement('img');
+		newImg.setAttribute("src", "images/" + c + ".png")
+		imageLi.appendChild(newImg);
+	};
+	
+	
 	// GetData Function: Write data from local storage to the browser
 	function getData(){
 		toggleControls("on");
@@ -188,6 +198,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var styleClass = obj.type[1]
 			console.log(styleClass);
 			makeSubList.setAttribute("class", getStyleClass(styleClass));
+			getImage(makeSubList, styleClass)
 			makeLi.appendChild(makeSubList);
 			for(var n in obj){
 				var makeSubLi = document.createElement('li');
