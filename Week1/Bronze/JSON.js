@@ -40,11 +40,11 @@ var json = {
 		"item.date": ["Date Added:", ""]
 	},
 	"defaultBuff06": {
-		"group": ["Buff Name:", ""],
-		"type": ["Buff Type:", ""],
+		"group": ["Buff Name:", "Fortitude of the Mallard"],
+		"type": ["Buff Type:", "saves"],
 		"rounds": ["Rounds:", ""],
 		"prereq": ["Prerequisite:", ""],
-		"description": ["Description:", ""],
+		"description": ["Description:", "+5 on Fort Saves while holding a duck."],
 		"item.date": ["Date Added:", ""]
 	},
 	"defaultBuff07": {
