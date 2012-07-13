@@ -142,13 +142,37 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
+	//Get Style class, to color the saved items by dropdown class
+	function getStyleClass(c){
+		if (c === "saves") {
+			return "buffer-saves";
+		}else if(c === "ability") {
+			return "buffer-ability";
+		}else if(c === "armor") {
+			return "buffer-armor";
+		}else if(c === "attack") {
+			return "buffer-attack";
+		}else if(c === "damage") {
+			return "buffer-damage";
+		}else if(c === "skill") {
+			return "buffer-skill";
+		}else{
+			return "buffer";
+		};
+	};
+	
 	// GetData Function: Write data from local storage to the browser
 	function getData(){
 		toggleControls("on");
+		if(localStorage.length === 0){
+			alert("There is no data in local storage, so default data was added.");
+			autoFillData();
+		};
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
+		makeList.setAttribute("class", "mainList");
 		document.body.appendChild(makeDiv);
 		$('items').style.display = "block";
 		for(var i=0, len=localStorage.length; i<len; i++){
@@ -159,6 +183,11 @@ window.addEventListener("DOMContentLoaded", function(){
 			var value = localStorage.getItem(key);
 			var obj = JSON.parse(value); //Converts the string in local storage back to an object
 			var makeSubList = document.createElement('ul');
+/* 			makeSubList.setAttribute("class", "buffer"); */
+/* 			console.log(obj); */
+			var styleClass = obj.type[1]
+			console.log(styleClass);
+			makeSubList.setAttribute("class", getStyleClass(styleClass));
 			makeLi.appendChild(makeSubList);
 			for(var n in obj){
 				var makeSubLi = document.createElement('li');
@@ -168,6 +197,14 @@ window.addEventListener("DOMContentLoaded", function(){
 				makeSubList.appendChild(linksLi);
 			};
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete links for each item in local storage
+		};
+	};
+	
+	//Auto Populate Local Storage
+	function autoFillData(){
+		for(var n in json){
+			var id = Math.floor(Math.random()*100000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		};
 	};
 	

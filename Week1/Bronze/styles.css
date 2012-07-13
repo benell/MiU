@@ -48,3 +48,48 @@ submit {
     border: 1px solid #006;
     background: #ccf;
 }
+
+ul.mainList {
+	list-style-type: none ;
+}
+
+ul.buffer {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+    list-style-type: none ;
+}
+
+ul.buffer-saves {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+	background-color: #f5f3b3;
+    list-style-type: none ;
+}
+
+ul.buffer-ability {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+	background-color: #9dc5e4;
+    list-style-type: none ;
+}
+
+ul.buffer-attack {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+	background-color: #e1a0e4;
+    list-style-type: none ;
+}
+
+ul.buffer-damage {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+	background-color: #d48950;
+    list-style-type: none ;
+}
+
+ul.buffer-skill {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+	background-color: #c7f5b3;
+    list-style-type: none ;
+}
