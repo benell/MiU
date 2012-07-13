@@ -153,37 +153,16 @@ window.addEventListener("DOMContentLoaded", function(){
 				var makeSubLi = document.createElement('li');
 				makeSubList.appendChild(makeSubLi);
 				var optSubText = obj[n][0]+" "+obj[n][1];
-				makeSubList.innerHTML = optSubText;
+				makeSubLi.innerHTML = optSubText;
+				makeSubList.appendChild(linksLi);
 			};
-			makeSubList.appendChild(linksLi);
-			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons or links for each item in local storage
+			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete links for each item in local storage
 		};
 	};
-	//Make item links function
-	function makeItemLinks(key, linksLi){
-		//Edit single item link
-		var editLink = document.createElement('a');
-		editLink.href = "#";
-		editLink.key = key;
-		var editText = "Edit Buff";
-		editLink.addEventListener("click", editItem);
-		editLink.innerHTML = editText;
-		linksLi.appendChild(editLink);
-		
-		var breakTag = document.createElement('br');
-		linksLi.appendChild(breakTag);
-		
-		var deleteLink = document.createElement('a');
-		deleteLink.href = "#";
-		deleteLink.key = key;
-		var deleteText = "Remove Buff";
-		deleteLink.addEventListener("click", deleteItem);
-		deleteLink.innerHTML = deleteText;
-		linksLi.appendChild(deleteLink);
-	};
+	
 	//Edit Item Function
 	function editItem(){
-		//Grab the Data from our item from local storage
+		//Grab the Data for our item from local storage
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
 		
@@ -217,6 +196,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		editSubmit.key = this.key;
 		
 	};
+	
 	//Delete Item Function	
 	function deleteItem(){
 		var ask = confirm("Are you sure want to remove this buff?");
@@ -228,6 +208,30 @@ window.addEventListener("DOMContentLoaded", function(){
 			alert("No changes made.");
 		};
 	};
+	
+	//Make item links function
+	function makeItemLinks(key, linksLi){
+		//Edit single item link
+		var editLink = document.createElement('a');
+		editLink.href = "#";
+		editLink.key = key;
+		var editText = "Edit Buff";
+		editLink.addEventListener("click", editItem);
+		editLink.innerHTML = editText;
+		linksLi.appendChild(editLink);
+		
+		var breakTag = document.createElement('br');
+		linksLi.appendChild(breakTag);
+		
+		var deleteLink = document.createElement('a');
+		deleteLink.href = "#";
+		deleteLink.key = key;
+		var deleteText = "Remove Buff";
+		deleteLink.addEventListener("click", deleteItem);
+		deleteLink.innerHTML = deleteText;
+		linksLi.appendChild(deleteLink);
+	};
+	
 	//Clear Local Storage
 	function clearLocal(){
 		if(localStorage.length === 0){
@@ -241,7 +245,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 
 	//Set Link & Submit Click Events
-	
 	var displayLink =$('displayLink');
 	displayLink.addEventListener("click", getData);
 	var clearLink = $('clear');
