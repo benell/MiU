@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Author: Brian Enell -->
+<!-- Project: MiU -->
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="keywords" content="3.5,buff,session,dungeons,dragons" />
+		<meta name="description" content="Add a Buff" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<title>Add A Buff</title>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1>Buff Entry</h1>
+		<form action="#" method="post" id="buffForm">
+			<fieldset>
+				<legend>Buff Info</legend>
+				<ul id="errors"></ul>
+				<ul>
+					<li>
+						<label for="buffName">Buff Name:</label><input type="text" id="buffName" />
+					</li>
+					<li>
+						<label for="buffType">Buff Type:</label>
+						<select id="buffType">
+							<option id="typeAbility" value="ability">Ability</option>
+							<option id="typeArmor" value="armor">Armor</option>
+							<option id="typeSaves" value="saves">Saves</option>
+							<option id="typeAttack" value="attack">Attack</option>
+							<option id="typeDamage" value="damage">Damage</option>
+							<option id="typeSkill" value="skill">Skill</option>
+						</select>
+					</li>
+					<li>
+						<label for="buffRounds">For How Many Rounds?:(0 for longer than 1 min)</label><br />
+						<input type="range" id="buffRounds" min="0" max="10" value="0"/>
+					</li>
+					<li>Prerequisite?
+						<ul type="none">
+							<li><input type="radio" name="prereq" value="yes" id="prereqYes"/><label for="prereqYes">Yes</label></li>
+							<li><input type="radio" name="prereq" value="no" id="prereqNo" checked /><label for="prereqNo">No</label><br />
+						</ul>
+					</li>
+					<li>
+						<label for="description">Description:</label><br />
+						<textarea id="description" name="description"></textarea>
+					</li>
+					<li>
+						<label for="dateAdded">Date Added:</label>
+						<input type="date" id="dateAdded" />
+					</li>
+				</ul>
+			</fieldset>
+			<input type="submit" value="Add Buff" id="submit" />
+		</form>
+		<a href="#" id="clear">Clear Stored Data</a>
+		<a href="#" id="displayLink">Display Data</a>
+		<a href="#" id="addBuff" style="display:none;">Add Another Buff</a>
+	</body>
+	<script src="main.js" type="text/javascript"></script>
+</html>
