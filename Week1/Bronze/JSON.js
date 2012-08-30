@@ -48,11 +48,11 @@ var json = {
 		"item.date": ["Date Added:", ""]
 	},
 	"defaultBuff07": {
-		"group": ["Buff Name:", ""],
-		"type": ["Buff Type:", ""],
-		"rounds": ["Rounds:", ""],
-		"prereq": ["Prerequisite:", ""],
-		"description": ["Description:", ""],
+		"group": ["Buff Name:", "No but seriously..."],
+		"type": ["Buff Type:", "saves"],
+		"rounds": ["Rounds:", "1"],
+		"prereq": ["Prerequisite:", "Yes"],
+		"description": ["Description:", "Reroll last failed save"],
 		"item.date": ["Date Added:", ""]
 	},
 	"defaultBuff08": {

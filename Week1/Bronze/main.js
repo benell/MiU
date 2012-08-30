@@ -1,5 +1,6 @@
 // Author: Brian Enell
 // Project: MiU
+// Project Date: 0912
 
 //Wait for the DOM to become ready.
 window.addEventListener("DOMContentLoaded", function(){
