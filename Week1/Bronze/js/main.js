@@ -41,8 +41,30 @@ window.addEventListener("DOMContentLoaded", function(){
 				break;
 		};
 	};
+	
+	//Find value of selected Radio Button.
+	function getSelectedRadio(){
+		console.log("Ran getSelectedRadio function");
+		var radios = document.forms[0].prereq;
+		for(var i=0; i<radios.length; i++){
+			if(radios[i].checked){
+				radioValue = radios[i].value;
+			};
+		};
+	};
+	
+	//Find value of Checkbox
+	function getCheckboxValue(){
+		if($('buffTouch').checked){
+			checkValue = $('buffTouch').value;
+		} else {
+			checkValue = "No";
+		};
+	};
+	
 	//Store Data Function
 	function storeData(key){
+	console.log("storeData has run");
 		var id;
 		if(!key){
 			id		= Math.floor(Math.random()*100000001); //Creating an ID number allows you to create multiple saves
@@ -52,15 +74,27 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 		//gather up all our form field values and store them in an object.
 		//Object properties contain an array that has the form label and the input values.
-		getSelectedRadio(); //Sets the variable that is used in the object
-		//getCheckboxValue(); //Same for checkbox
+		//getSelectedRadio(); //Sets the variable that is used in the object
+		getCheckboxValue(); //Same for checkbox
 		var item				= {}; //Create the Object
 			item.name			= ["Buff Name:", $('buffName').value]; //Assign it values based on the elements in the form using the getElementById function.
-			item.type			= ["Buff Type:", $('buffType').value];//.value is the attribute that we use to store the user input.
 			item.rounds			= ["Rounds:", $('buffRounds').value];
-			item.prereq			= ["Prerequisite:", radioValue];
+			item.type			= ["Buff Type:", $('buffType').value];//.value is the attribute that we use to store the user input.
+			item.tohit			= ["To Hit:", $('buffToHit').value];
+			item.damage			= ["Damage:", $('buffDamage').value];
+			item.ac 			= ["AC:", $('buffAC').value];
+			item.touch/*chkbox*/= ["To Touch:", checkValue];
+			item.fortitude		= ["Fortitude:", $('buffFortitutde').value];
+			item.reflex			= ["Reflex:", $('buffReflex').value];
+			item.will			= ["Will:", $('buffWill').value];
+			item.strength		= ["Strength:", $('buffStrength').value];
+			item.dexterity		= ["Desxterity:", $('buffDexterity').value];
+			item.constitution	= ["Constitution:", $('buffConstitution').value];
+			item.intelligence	= ["Intelligence:", $('buffIntelligence').value];
+			item.wisdom			= ["Wisdom:", $('buffWisdom').value];
+			item.charisma		= ["Charisma:", $('buffCharisma').value];
+			item.circle			= ["Circle:", $('buffCircle').value];
 			item.description	= ["Description:", $('description').value];
-			item.date			= ["Date Added:", $('dateAdded').value];
 	
 		//Save data into Local Storage; Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
@@ -69,6 +103,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Validate Function
 	function validate(e){
+		console.log("Validate function is runnning");
 		//define the elements we check
 		var getName = $('buffName');
 		var getDescription = $('description');
@@ -116,6 +151,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				errorMsg.appendChild(txt);
 			};
 			e.preventDefault();
+			console.log("Line 153 messed you up");
 			return false;
 		}else{
 			//Store data if no errors
@@ -123,40 +159,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 	
-	//Find value of selected Radio Button.
-	function getSelectedRadio(){
-		console.log("Ran getSelectedRadio function");
-		var radios = document.forms[0].prereq;
-		for(var i=0; i<radios.length; i++){
-			if(radios[i].checked){
-				radioValue = radios[i].value;
-			};
-		};
-	};
-	
-	//Find value of Checkbox
-	function getCheckboxValue(){
-		if($('checkboxId').checked){
-			checkValue = $('checkboxId').value;
-		} else {
-			checkValue = "No";
-		};
-	};
-	
 	//Get Style class, to color the saved items by dropdown class
 	function getStyleClass(c){
-		if (c === "saves") {
-			return "buffer-saves";
-		}else if(c === "ability") {
-			return "buffer-ability";
-		}else if(c === "armor") {
-			return "buffer-armor";
-		}else if(c === "attack") {
-			return "buffer-attack";
-		}else if(c === "damage") {
-			return "buffer-damage";
-		}else if(c === "skill") {
-			return "buffer-skill";
+		if (c === "Untyped") {
+			return "untyped";
+		}else if(c === "Enhancement") {
+			return "enhancement";
+		}else if(c === "Morale") {
+			return "morale";
+		}else if(c === "Deflection") {
+			return "deflection";
 		}else{
 			return "buffer";
 		};
@@ -167,7 +179,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var imageLi = document.createElement('li');
 		makeSubList.appendChild(imageLi);
 		var newImg = document.createElement('img');
-		newImg.setAttribute("src", "images/" + c + ".png")
+		newImg.setAttribute("src", "images/" + c + ".png");
 		imageLi.appendChild(newImg);
 	};
 	
@@ -196,17 +208,19 @@ window.addEventListener("DOMContentLoaded", function(){
 			var makeSubList = document.createElement('ul');
 /* 			makeSubList.setAttribute("class", "buffer"); */
 /* 			console.log(obj); */
-			var styleClass = obj.type[1]
+			var styleClass = obj.type[1];
 			console.log(styleClass);
 			makeSubList.setAttribute("class", getStyleClass(styleClass));
-			getImage(makeSubList, styleClass)
+			getImage(makeSubList, styleClass);
 			makeLi.appendChild(makeSubList);
 			for(var n in obj){
-				var makeSubLi = document.createElement('li');
-				makeSubList.appendChild(makeSubLi);
-				var optSubText = obj[n][0]+" "+obj[n][1];
-				makeSubLi.innerHTML = optSubText;
-				makeSubList.appendChild(linksLi);
+				if (obj[n][1] != 0){
+					var makeSubLi = document.createElement('li');
+					makeSubList.appendChild(makeSubLi);
+					var optSubText = obj[n][0]+" "+obj[n][1];
+					makeSubLi.innerHTML = optSubText;
+					makeSubList.appendChild(linksLi);
+				};
 			};
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete links for each item in local storage
 		};
@@ -214,6 +228,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Auto Populate Local Storage
 	function autoFillData(){
+		console.log("Function: autoFillData, has run");
 		for(var n in json){
 			var id = Math.floor(Math.random()*100000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
@@ -224,24 +239,31 @@ window.addEventListener("DOMContentLoaded", function(){
 	function editItem(){
 		//Grab the Data for our item from local storage
 		var value = localStorage.getItem(this.key);
+		console.log("This is the value of value = localStorage.getItem(this.key):" + " " + value);
 		var item = JSON.parse(value);
+		console.log("This is the value of item: " + item);
 		
 		toggleControls("off");
 		
 		//populate the form fields with the current localStorage values.
 		$('buffName').value = item.name[1];
-		$('buffType').value = item.type[1];
 		$('buffRounds').value = item.rounds[1];
-		var radios = document.forms[0].prereq;
-		for(var i=0; i<radios.length; i++){ //This is the check for the Radio Buttons
-			if(radios[i].value == "yes" && item.prereq[1] == "yes"){
-				radios[i].setAttribute("checked", "checked");
-			}else{
-				radios[i].setAttribute("checked", "checked");
-			};
-		};
+		$('buffType').value = item.type[1];
+		$('buffToHit').value = item.tohit[1];
+		$('buffDamage').value = item.damage[1];
+		$('buffAC').value = item.ac[1];
+		$('buffTouch').value = item.touch[1];
+		$('buffFortitude').value = item.fortitude[1];
+		$('buffReflex').value = item.reflex[1];
+		$('buffWill').value = item.will[1];
+		$('buffStrength').value = item.strength[1];
+		$('buffDexterity').value = item.dexterity[1];
+		$('buffConstitution').value = item.constitution[1];
+		$('buffIntelligence').value = item.intelligence[1];
+		$('buffWisdom').value = item.wisdom[1];
+		$('buffCharisma').value = item.charisma[1];
+		$('buffCircle').value = item.circle[1];
 		$('description').value = item.description[1];
-		$('dateAdded').value = item.date[1];
 		//repeat format for items to fill
 		
 		

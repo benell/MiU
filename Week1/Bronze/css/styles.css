@@ -5,22 +5,21 @@ Project Date: 0912
 */
 
 body {
-	background-color: #ffffff;
+	background: #ffffff;
 }
 
 h1 {
 	margin: 0px;
 	padding: 10px;
-	border-bottom-left-radius: 35% ;
-	border-bottom-right-radius: 35% ;
+	border-bottom-right-radius: 15% ;
+	border-bottom-left-radius: 15% ;
 	text-align: center ;
 	border-style: solid;
 	border-width: 1px ;
 	border-color: black ;
-	background-color: #ffffff;
-	font-weight: bold;
-/* 	text-shadow: 2px -2px 5px #e2aca0; */
-	font-family: fantasy;
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+    list-style-type: none ;
+    font-family: celestia antigua std;
 }
 
 form {
@@ -29,7 +28,7 @@ form {
 	background-color: #ffffff;
 	text-shadow: -3px 0px 5px #d0b688;
 	padding-left: 2px;
-	font-family: fantasy;
+	font-family: celestia antigua std;
 }
 
 items {
@@ -60,7 +59,7 @@ ul.buffer {
     list-style-type: none ;
 }
 
-ul.buffer-saves {
+ul.untyped {
 	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
 	padding-top: 5px ;
 	padding-bottom: 5px ;
@@ -69,7 +68,7 @@ ul.buffer-saves {
     list-style-type: none ;
 }
 
-ul.buffer-ability {
+ul.morale {
 	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
 	padding-top: 5px ;
 	padding-bottom: 5px ;
@@ -78,7 +77,7 @@ ul.buffer-ability {
     list-style-type: none ;
 }
 
-ul.buffer-attack {
+ul.deflection {
 	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
 	padding-top: 5px ;
 	padding-bottom: 5px ;
@@ -87,7 +86,7 @@ ul.buffer-attack {
     list-style-type: none ;
 }
 
-ul.buffer-damage {
+ul.enhancement {
 	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
 	padding-top: 5px ;
 	padding-bottom: 5px ;
@@ -96,7 +95,8 @@ ul.buffer-damage {
     list-style-type: none ;
 }
 
-ul.buffer-skill {
+/*
+ul.none {
 	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
 	padding-top: 5px ;
 	padding-bottom: 5px ;
@@ -104,3 +104,4 @@ ul.buffer-skill {
 	background-color: #c7f5b3;
     list-style-type: none ;
 }
+*/
