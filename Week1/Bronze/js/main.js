@@ -214,7 +214,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			getImage(makeSubList, styleClass);
 			makeLi.appendChild(makeSubList);
 			for(var n in obj){
-				if (obj[n][1] != 0){
+				if (obj[n][1] !== 0){
 					var makeSubLi = document.createElement('li');
 					makeSubList.appendChild(makeSubLi);
 					var optSubText = obj[n][0]+" "+obj[n][1];
