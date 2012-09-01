@@ -18,6 +18,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff02": {
 		"name"			: ["Buff Name:" , "Conviction"],
@@ -38,6 +39,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff03": {
 		"name"			: ["Buff Name:" , "Recitation"],
@@ -58,6 +60,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "4"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff04": {
 		"name"			: ["Buff Name:" , "Bull's Strength"],
@@ -78,6 +81,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff05": {
 		"name"			: ["Buff Name:" , "Cat's Grace"],
@@ -98,6 +102,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff06": {
 		"name"			: ["Buff Name:" , "Bear's Endurance"],
@@ -118,6 +123,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff07": {
 		"name"			: ["Buff Name:" , "Fox's Cunning"],
@@ -138,6 +144,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff08": {
 		"name"			: ["Buff Name:" , "Owl's Wisdom"],
@@ -158,6 +165,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff09": {
 		"name"			: ["Buff Name:" , "Eagle's Splendor"],
@@ -178,6 +186,7 @@ var json = {
 		"charisma"		: ["Charisma:" , "4"],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff10": {
 		"name"			: ["Buff Name:" , "Righteous Wrath of the Faithful"],
@@ -198,6 +207,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "5"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff11": {
 		"name"			: ["Buff Name:" , "Righteous Might"],
@@ -218,6 +228,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "5"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff12": {
 		"name"			: ["Buff Name:" , "Divine Power"],
@@ -238,6 +249,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "4"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff13": {
 		"name"			: ["Buff Name:" , "Sacred Haven"],
@@ -258,6 +270,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "4"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff14": {
 		"name"			: ["Buff Name:" , "Divine Favor"],
@@ -278,6 +291,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff15": {
 		"name"			: ["Buff Name:" , "Bless"],
@@ -298,6 +312,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff16": {
 		"name"			: ["Buff Name:" , "Prayer"],
@@ -318,6 +333,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "3"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff17": {
 		"name"			: ["Buff Name:" , "Good Hope"],
@@ -338,6 +354,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "3"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff18": {
 		"name"			: ["Buff Name:" , "Shield of Faith"],
@@ -358,6 +375,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff19": {
 		"name"			: ["Buff Name:" , "Heroism, Greater"],
@@ -378,6 +396,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "6"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff20": {
 		"name"			: ["Buff Name:" , "Mage Armor"],
@@ -398,6 +417,7 @@ var json = {
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
 		"description"	: ["Description:" , ""],//Text box, go nuts.
+		"active"		: ["Active:", "No"],
 	},
 	
 };

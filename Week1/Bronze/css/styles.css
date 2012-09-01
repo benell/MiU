@@ -22,6 +22,34 @@ h1 {
     font-family: celestia antigua std;
 }
 
+h2 {
+	margin: 0px;
+	padding: 10px;
+	border-bottom-right-radius: 15% ;
+	border-bottom-left-radius: 15% ;
+	text-align: center ;
+	border-style: solid;
+	border-width: 1px ;
+	border-color: black ;
+	box-shadow: 0px 14px 9px -9px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+    list-style-type: none ;
+    font: celestia antiqua std;
+}
+
+h3 {
+	margin: 0px;
+	padding: 10px;
+	border-bottom-right-radius: 15% ;
+	border-bottom-left-radius: 15% ;
+	text-align: center ;
+	border-style: solid;
+	border-width: 1px ;
+	border-color: black ;
+	box-shadow: 0px 12px 8px -8px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 30px rgba(0, 0, 0, 0.1) inset;
+    list-style-type: none ;
+    font: celestia antiqua std;
+}
+
 form {
 	margin: 0px;
 	list-style-type: cjk-ideographic;

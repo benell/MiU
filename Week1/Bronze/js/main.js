@@ -95,6 +95,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.charisma		= ["Charisma:", $('buffCharisma').value];
 			item.circle			= ["Circle:", $('buffCircle').value];
 			item.description	= ["Description:", $('description').value];
+			item.active			= ["Active:", checkValue];
 	
 		//Save data into Local Storage; Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
@@ -225,6 +226,41 @@ window.addEventListener("DOMContentLoaded", function(){
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete links for each item in local storage
 		};
 	};
+	//displayData: Write the local storage data to the appropriate list on index screen.
+	function displayData(){
+		var actList = $('activeList');
+		var inaList = $('inactiveList');
+		for(var i=0, len=localStorage.length; i<len; i++){
+			var makeLi = document.createElement('li');
+			var linksLi = document.createElement('li');
+			var key = localStorage.key(i); //because this is in a for loop, i represents the iteration of the loop that we are in.
+			var value = localStorage.getItem(key);
+			var obj = JSON.parse(value); //Converts the string in local storage back to an object
+			var makeSubList = document.createElement('ul');
+			var styleClass = obj.type[1];
+			var activeOrNot = obj.active[1];
+			if (activeOrNot === "Yes"){
+				actList.appendChild(makeLi);
+			}else{
+				inaList.appendChild(makeLi);
+			};
+			console.log(styleClass);
+			makeSubList.setAttribute("class", getStyleClass(styleClass));
+			getImage(makeSubList, styleClass);
+			makeLi.appendChild(makeSubList);
+			for(var n in obj){
+				if (obj[n][1] !== 0){
+					var makeSubLi = document.createElement('li');
+					makeSubList.appendChild(makeSubLi);
+					var optSubText = obj[n][0]+" "+obj[n][1];
+					makeSubLi.innerHTML = optSubText;
+					makeSubList.appendChild(linksLi);
+				};
+			};
+			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete links for each item in local storage
+		};
+	}
+	
 	
 	//Auto Populate Local Storage
 	function autoFillData(){
@@ -232,6 +268,17 @@ window.addEventListener("DOMContentLoaded", function(){
 		for(var n in json){
 			var id = Math.floor(Math.random()*100000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
+		};
+	};
+	
+	function checkBeforeLoad(){
+		if(localStorage.length === 0){
+			alert("There is no data in local storage, so default data was added.");
+			autoFillData();
+			displayData();
+		}else{
+			alert("Local Storage data already exists. Please clear data first.");
+			clearLocal();
 		};
 	};
 	
@@ -264,6 +311,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		$('buffCharisma').value = item.charisma[1];
 		$('buffCircle').value = item.circle[1];
 		$('description').value = item.description[1];
+		$('buffActive').value = item.active[1];
 		//repeat format for items to fill
 		
 		
@@ -318,14 +366,22 @@ window.addEventListener("DOMContentLoaded", function(){
 		if(localStorage.length === 0){
 			alert("There is no data to clear.");
 		}else{
-			localStorage.clear();
-			alert("Data Cleared.");
-			window.location.reload();
-			return false;
+			var reply = confirm("Clear Local Storage Data?")
+			if (reply === true){
+				localStorage.clear();
+				alert("Data Cleared.");
+				window.location.reload();
+				return false;
+			}else{
+				return false;
+			};
 		};
 	};
+	
 
 	//Set Link & Submit Click Events
+	var loadPreData = $('loadPresetsButton');
+	loadPreData.addEventListener("click", checkBeforeLoad)
 	var displayLink =$('displayLink');
 	displayLink.addEventListener("click", getData);
 	var clearLink = $('clear');
