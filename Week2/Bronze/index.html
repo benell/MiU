@@ -1,103 +1,101 @@
 <!doctype html>  
 <html lang="en">
 <head>
-
 	<meta charset="utf-8">
-	
-	<title>Jefferson Startership</title>
-	
+	<title>Buff Browser</title>
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on">
-	
-	<!-- StyleSheets under here -->
+		<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	
-	
-	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-
 </head>
 <body>
 	<div data-role="page" id="home">
 	
 		<div data-role="header" data-position="fixed">
-			<h1> Jefferson Startership</h1>
+			<h1>Buff Browser</h1>
 		</div>
 		
 		<div data-role="content">
-			<p>Start here and make sure the navbar is stuck at the bottom and unhighlighted.</p>
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="constant">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#favorite" data-icon="star">Favorite</a></li>
-					<li><a href="#change" data-icon="gear">Change</a></li>
-					<li><a href="#search" data-icon="search">Search</a></li>
-				</ul>
+			<div class="ui-grid-solo">
+				<div class="ui-block-a"><img src="images/buffbrowsercta.png" style="align: center"/></div>
+				<div class="ui-block-a"><p>An app to help organize all of your standard and house rule buffs.</p></div>
+			</div>			
+			<div data-role="controlgroup">
+				<a href="#buffList" data-role="button" data-icon="grid" data-iconpos="right">Buff List</a>
+				<a href="#" id="presets" data-role="button" data-icon="plus" data-iconpos="right">Load Presets</a>
 			</div>
 		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			
+		</div>
 	
-	</div>
+	</div> <!-- End "home" page -->
 	
-	<div data-role="page" id="favorite" data-add-back-btn="true">
+	<div data-role="page" id="buffList">
 	
 		<div data-role="header" data-position="fixed">
-			<a data-role="button" href="#home" data-icon="home">Home</a>
-			<h1>Favorites</h1>
+			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a>
+			<h1>Buff List</h1>
+			<a href="#" id="searchButton" data-icon="search" data-iconpos="notext" data-theme="b"></a>
 		</div>
 		
 		<div data-role="content">
-			<ul data-style="d">
-				<li>A list in style d.</li>
+			<ul id="theList">
+				<li>
+					The list of buffs goes here
+				</li>
+				<li>The list of buffs goes here</li>
+				<li>The list of buffs goes here</li>
 			</ul>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="constant">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#favorite" data-icon="star" class="ui-btn-active ui-state-persist">Favorite</a></li>
-					<li><a href="#change" data-icon="gear">Change</a></li>
-					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#buffList" data-icon="grid" class="ui-btn-active ui-state-persist">Buff List</a></li>
+					<li><a href="#additem" data-icon="plus">Add Buff</a></li>
 				</ul>
 			</div>
 		</div>
 	
-	</div>
+	</div> <!-- End "buffList" page -->
 	
-	<div data-role="page" id="change" data-add-back-btn="true">
+	<div data-role="page" id="additem">
 	
 		<div data-role="header" data-position="fixed">
-			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="b"></a>
-			<h1>Change</h1>
+			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a>
+			<h1>Add Buff</h1>
 		</div>
 		
 		<div data-role="content">
-			<p>Riff.</p>
+			<p>The Buff Form Goes here.</p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="constant">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#favorite" data-icon="star">Favorite</a></li>
-					<li><a href="#change" data-icon="gear" class="ui-btn-active ui-state-persist">Change</a></li>
-					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#buffList" data-icon="grid">Buff List</a></li>
+					<li><a href="#additem" data-icon="plus" class="ui-btn-active ui-state-persist">Add Buff</a></li>
 				</ul>
 			</div>
 		</div>
 	
-	</div>
+	</div> <!-- End of "additem" page -->
+	
+<!--
 	<div data-role="page" id="search" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
-			<a href="#home" data-icon="home">Home</a>
-			<h1>Search</h1>
+			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a>
+			<h1>Search Buffs</h1>
 		</div>
 		
 		<div data-role="content">
@@ -107,14 +105,15 @@
 		<div data-role="footer" data-position="fixed" data-id="constant">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#favorite" data-icon="star">Favorite</a></li>
-					<li><a href="#change" data-icon="gear" >Change</a></li>
-					<li><a href="#search" data-icon="search" class="ui-btn-active ui-state-persist">Search</a></li>
+					<li><a href="#buffList" data-icon="grid">Buff List</a></li>
+					<li><a href="#additem" data-icon="plus">Add Buff</a></li>
+					<li><a href="#search" data-icon="search" class="ui-btn-active ui-state-persist">Search Buffs</a></li>
 				</ul>
 			</div>
 		</div>
 	
 	</div>
+-->
 	
 
 	<!-- JavaScript under here -->
