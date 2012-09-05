@@ -1,0 +1,125 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Jefferson Startership</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<div data-role="page" id="home">
+	
+		<div data-role="header" data-position="fixed">
+			<h1> Jefferson Startership</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Start here and make sure the navbar is stuck at the bottom and unhighlighted.</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="star">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div data-role="page" id="favorite" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<a data-role="button" href="#home" data-icon="home">Home</a>
+			<h1>Favorites</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul data-style="d">
+				<li>A list in style d.</li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="star" class="ui-btn-active ui-state-persist">Favorite</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div data-role="page" id="change" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="b"></a>
+			<h1>Change</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Riff.</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="star">Favorite</a></li>
+					<li><a href="#change" data-icon="gear" class="ui-btn-active ui-state-persist">Change</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+	<div data-role="page" id="search" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<a href="#home" data-icon="home">Home</a>
+			<h1>Search</h1>
+		</div>
+		
+		<div data-role="content">
+			<input type="search" data-role="search" placeholder="Search Me!" />
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="star">Favorite</a></li>
+					<li><a href="#change" data-icon="gear" >Change</a></li>
+					<li><a href="#search" data-icon="search" class="ui-btn-active ui-state-persist">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/main.js"></script>
+</body>
+</html>
