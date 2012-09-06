@@ -17,7 +17,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff02": {
@@ -38,7 +38,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff03": {
@@ -59,7 +59,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "4"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff04": {
@@ -80,7 +80,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff05": {
@@ -101,7 +101,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff06": {
@@ -122,7 +122,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff07": {
@@ -143,7 +143,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff08": {
@@ -164,7 +164,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , "4"],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff09": {
@@ -185,7 +185,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , "4"],
 		"circle"		: ["Circle:" , "2"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff10": {
@@ -206,7 +206,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "5"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff11": {
@@ -227,7 +227,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "5"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff12": {
@@ -248,7 +248,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "4"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff13": {
@@ -269,7 +269,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "4"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff14": {
@@ -290,7 +290,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff15": {
@@ -311,7 +311,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff16": {
@@ -332,7 +332,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "3"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff17": {
@@ -353,7 +353,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "3"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff18": {
@@ -374,7 +374,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff19": {
@@ -395,7 +395,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "6"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff20": {
@@ -416,7 +416,7 @@ var json = {
 		"wisdom"		: ["Wisdom:" , ""],
 		"charisma"		: ["Charisma:" , ""],
 		"circle"		: ["Circle:" , "1"],//Values: # 1-9
-		"buffGame"		: ["Buff Game:" , "DND35"],
+		"description"	: ["Description:" , ""],//Text box, go nuts.
 		"active"		: ["Active:", "No"],
 	},
 	

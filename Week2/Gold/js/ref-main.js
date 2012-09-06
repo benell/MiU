@@ -94,7 +94,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.wisdom			= ["Wisdom:", $('buffWisdom').value];
 			item.charisma		= ["Charisma:", $('buffCharisma').value];
 			item.circle			= ["Circle:", $('buffCircle').value];
-			item.buffGame	= ["Buff Game", $('buffGame').value];
+			item.description	= ["Description:", $('description').value];
 			item.active			= ["Active:", checkValue];
 	
 		//Save data into Local Storage; Use Stringify to convert our object to a string.
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		console.log("Validate function is runnning");
 		//define the elements we check
 		var getName = $('buffName');
-		var getBuffGame = $('buffGame');
+		var getDescription = $('description');
 //		var getEmail = $('email');
 		
 		//reset error messages
@@ -125,12 +125,12 @@ window.addEventListener("DOMContentLoaded", function(){
 			getName.style.border = "1px solid green";	
 		};
 		
-		if(getBuffGame.value === ""){
-			var buffGameError = "Please enter a Buff Game.";
-			getBuffGame.style.border = "1px solid red";
-			messageAry.push(buffGameError);
+		if(getDescription.value === ""){
+			var descriptionError = "Please enter a description.";
+			getDescription.style.border = "1px solid red";
+			messageAry.push(descriptionError);
 		}else {
-			getBuffGame.style.border = "1px solid green";
+			getDescription.style.border = "1px solid green";
 		};
 		
 /*
@@ -310,7 +310,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		$('buffWisdom').value = item.wisdom[1];
 		$('buffCharisma').value = item.charisma[1];
 		$('buffCircle').value = item.circle[1];
-		$('buffGame').value = item.buffGame[1];
+		$('description').value = item.description[1];
 		$('buffActive').value = item.active[1];
 		//repeat format for items to fill
 		
@@ -390,7 +390,5 @@ window.addEventListener("DOMContentLoaded", function(){
 	save.addEventListener("click", storeData);
 	var addBuffLink =$('addBuff');
 	addBuffLink.addEventListener("click",toggleControls);
-	
-
 	
 });
