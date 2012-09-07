@@ -10,7 +10,7 @@ $('#home').on('pageinit', function(){
 		
 $('#addItem').on('pageinit', function(){
 
-		var myForm = $('#formId');
+		var myForm = $('#buffForm');
 		    myForm.validate({
 				invalidHandler: function(form, validator) {
 				},
@@ -48,8 +48,8 @@ var storeData = function(data){
 		//getSelectedRadio(); //Sets the variable that is used in the object
 		getCheckboxValue(); //Same for checkbox
 		var item				= {}; //Create the Object
-			item.name			= ["Buff Name:", $('buffName').value]; //Assign it values based on the elements in the form using the getElementById function.
-			item.rounds			= ["Rounds:", $('buffRounds').value];
+			item.name			= ["Buff Name:", $('#buffName').val()]; //Assign it values based on the elements in the form using the getElementById function.
+			item.rounds			= ["Rounds:", $('#buffRounds').val()];
 			item.type			= ["Buff Type:", $('buffType').value];//.value is the attribute that we use to store the user input.
 			item.tohit			= ["To Hit:", $('buffToHit').value];
 			item.damage			= ["Damage:", $('buffDamage').value];
