@@ -133,7 +133,15 @@
 		</div>
 		
 		<div data-role="content">
-			This page is under construction.
+			<ul data-role="listview" id="DND35List" data-filter="true" data-theme="d" data-content-theme="d">
+				<li>					
+					<div data-role="collapsible" data-collapsed="true" data-theme="a">
+						<h4>D & D 3.5</h4>
+						<img src="images/dnd35.png" style="margin-bottom: 5px"/>
+						<p>The classic.</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="constant">
@@ -242,7 +250,7 @@
 		</div>
 		
 		<div data-role="content">
-			<form data-role="form" action="#" method="post" id="buffForm">
+			<form data-role="form" action="javascript:" method="post" id="buffForm">
 			<fieldset>
 				<legend>Buff Info</legend>
 				<ul id="errors"></ul>
@@ -300,7 +308,7 @@
 					<li><label for="buffActive">Active?</label><input type="checkbox" id="buffActive" /></li>
 				</ul>
 			</fieldset>
-			<input type="submit" id="submit" />
+			<input data-role="button" data-theme="b" value="Save" type="submit" id="submit" />
 		</form>
 		</div>
 		

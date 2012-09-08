@@ -260,7 +260,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			};
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete links for each item in local storage
 		};
-	}
+	};
 	
 	
 	//Auto Populate Local Storage
@@ -316,12 +316,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 		
 		//remove the initial listener from the event
-		save.removeEventListener("click", storeData);
+		//save.removeEventListener("click", storeData);
 		//Change Submit button Value to Edit Button
 		$('submit').value = "Save Edit";
 		var editSubmit = $('submit');
 		//Save the key value established in this function as a property of the editSubmit event so we can se that value when we save the data we edited.
-		editSubmit.addEventListener("click", validate);
+		//editSubmit.addEventListener("click", validate);
 		editSubmit.key = this.key;
 		
 	};
