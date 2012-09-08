@@ -1,0 +1,139 @@
+/*
+Author: Brian Enell
+Project: MiU
+Project Date: 0912
+*/
+
+body {
+	background: #ffffff;
+}
+
+h1 {
+	margin: 0px;
+	padding: 10px;
+	border-bottom-right-radius: 15% ;
+	border-bottom-left-radius: 15% ;
+	text-align: center ;
+	border-style: solid;
+	border-width: 1px ;
+	border-color: black ;
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+    list-style-type: none ;
+    font-family: celestia antigua std;
+}
+
+h2 {
+	margin: 0px;
+	padding: 10px;
+	border-bottom-right-radius: 15% ;
+	border-bottom-left-radius: 15% ;
+	text-align: center ;
+	border-style: solid;
+	border-width: 1px ;
+	border-color: black ;
+	box-shadow: 0px 14px 9px -9px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+    list-style-type: none ;
+    font: celestia antiqua std;
+}
+
+h3 {
+	margin: 0px;
+	padding: 10px;
+	border-bottom-right-radius: 15% ;
+	border-bottom-left-radius: 15% ;
+	text-align: center ;
+	border-style: solid;
+	border-width: 1px ;
+	border-color: black ;
+	box-shadow: 0px 12px 8px -8px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 30px rgba(0, 0, 0, 0.1) inset;
+    list-style-type: none ;
+    font: celestia antiqua std;
+}
+
+form {
+	margin: 0px;
+	list-style-type: cjk-ideographic;
+	background-color: #ffffff;
+	text-shadow: -3px 0px 5px #d0b688;
+	padding-left: 2px;
+	font-family: celestia antigua std;
+}
+
+items {
+	text-shadow: 0px -2px 5px #fdff87;
+	background-color: #e4d2f6;
+	font-family: fantasy;
+}
+
+submit {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 100px;
+	padding-left: 100px;
+	font-family: fantasy;
+}
+.button {
+    border: 1px solid #006;
+    background: #ccf;
+}
+
+ul.mainList {
+	list-style-type: none ;
+}
+
+ul.buffer {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 11px ;
+    list-style-type: none ;
+}
+
+ul.untyped {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	margin-bottom: 11px ;
+	background-color: #f5f3b3;
+    list-style-type: none ;
+}
+
+ul.morale {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	margin-bottom: 11px ;
+	background-color: #9dc5e4;
+    list-style-type: none ;
+}
+
+ul.deflection {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	margin-bottom: 11px ;
+	background-color: #e1a0e4;
+    list-style-type: none ;
+}
+
+ul.enhancement {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	margin-bottom: 11px ;
+	background-color: #d48950;
+    list-style-type: none ;
+}
+
+ul.inactiveList {
+	list-style-type: none;
+}
+
+/*
+ul.none {
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	margin-bottom: 11px ;
+	background-color: #c7f5b3;
+    list-style-type: none ;
+}
+*/
