@@ -12,7 +12,7 @@
 		<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
-		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 </head>
 <body>
@@ -77,9 +77,9 @@
 		<div data-role="footer" data-position="fixed" data-id="constant">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" data-icon="arrow-l" class="ui-btn-disbaled">Back</a></li>
-					<li><a href="#" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-					<li><a href="#" data-icon="info">About</a></li>
+					<li><a href="#" data-icon="arrow-l" class="ui-btn-disabled">Back</a></li>
+					<li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#about" data-icon="info">About</a></li>
 					<li><a href="#" data-icon="grid">News</a></li>
 				</ul>
 			</div>
@@ -133,12 +133,14 @@
 		</div>
 		
 		<div data-role="content">
-			<ul data-role="listview" id="DND35List" data-filter="true" data-theme="d" data-content-theme="d">
+			<ul data-role="listview" data-filter="true" data-theme="d" data-content-theme="d">
 				<li>					
 					<div data-role="collapsible" data-collapsed="true" data-theme="a">
 						<h4>D & D 3.5</h4>
 						<img src="images/dnd35.png" style="margin-bottom: 5px"/>
 						<p>The classic.</p>
+						<ul data-content-theme="d" id="DND35List">
+						</ul>
 					</div>
 				</li>
 			</ul>
@@ -250,7 +252,7 @@
 		</div>
 		
 		<div data-role="content">
-			<form data-role="form" action="javascript:" method="post" id="buffForm">
+			<form data-role="form" action="#addItem" method="post" id="buffForm">
 			<fieldset>
 				<legend>Buff Info</legend>
 				<ul id="errors"></ul>
@@ -315,8 +317,10 @@
 		<div data-role="footer" data-position="fixed" data-id="constant">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#buffList" data-icon="grid">Buff List</a></li>
-					<li><a href="#addItem" data-icon="plus" class="ui-btn-active ui-state-persist">Add Buff</a></li>
+					<li><a href="#" data-icon="back" >Back</a></li>
+					<li><a href="#home" data-icon="home" >Home</a></li>
+					<li><a href="#about" data-icon="info" >About</a></li>
+					<li><a href="#" data-icon="grid">News</a></li>
 				</ul>
 			</div>
 		</div>
@@ -347,7 +351,41 @@
 	
 	</div>
 -->
+
+	<div data-role="page" id="about">
 	
+		<div data-role="header" data-position="fixed">
+			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a>
+			<h1>About</h1>
+			<a href="#" id="searchButton" data-icon="search" data-iconpos="notext" data-theme="b"></a>
+		</div>
+		
+		<div data-role="content">
+			<ul id="aboutList">
+				<li>
+					<a data-role="button" data-theme="b" id="dataButton" href="#">Load Preset Data</a>
+				</li>
+				<li>
+					<a data-role="button" href="#" id="clearButton">Clear Local Storage</a>
+				</li>
+				<li>
+					<a data-role="button" href="#" id="popButton" data-theme="e">Populate Data</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-icon="arrow-l" >Back</a></li>
+					<li><a href="#home" data-icon="home" >Home</a></li>
+					<li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+					<li><a href="#" data-icon="grid">News</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div> <!-- End "about" page -->	
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>

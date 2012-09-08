@@ -1,6 +1,6 @@
 var json = {
 	"defaultBuff01": {
-		"buffName"		: ["Buff Name:" , "Heroism"],
+		"name"			: ["Buff Name:" , "Heroism"],
 		"rounds"		: ["Rounds:" , "300"],
 		"type"			: ["Buff Type:" , "Morale"],//Values: Untyped , Morale, Enhancement , Deflection 
 		"tohit"			: ["To Hit:" , "2"],
@@ -378,7 +378,7 @@ var json = {
 		"active"		: ["Active:", "No"],
 	},
 	"defaultBuff19": {
-		"name"			: ["Buff Name:" , "Heroism, Greater"],
+		"name"			: ["Buff Name:" , "Greater Heroism"],
 		"rounds"		: ["Rounds:" , "110"],
 		"type"			: ["Buff Type:" , "Morale"],//Values: Untyped , Morale, Enhancement , Deflection 
 		"tohit"			: ["To Hit:" , "4"],
